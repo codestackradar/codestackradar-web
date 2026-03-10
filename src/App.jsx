@@ -7,7 +7,7 @@ function App() {
   const [errorText, setErrorText] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const API_BASE = "https://codestackradar-api-production.up.railway.app";
   const searchSolutions = async () => {
 
     if (!errorText) return;
@@ -17,7 +17,7 @@ function App() {
     try {
 
       const response = await axios.get(
-        "https://codestackradar-api-production.up.railway.app/api/search?q=" + encodeURIComponent(errorText)
+        API_BASE + "/api/search?q=" + encodeURIComponent(errorText)
       );
 
       setResults(response.data);
