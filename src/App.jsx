@@ -17,7 +17,7 @@ function App() {
     try {
 
       const response = await axios.get(
-        "https://codestackradar-api-production.up.railway.app/api/search" + encodeURIComponent(errorText)
+        "https://codestackradar-api-production.up.railway.app/api/search?q=" + encodeURIComponent(errorText)
       );
 
       setResults(response.data);
