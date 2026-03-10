@@ -17,7 +17,7 @@ function App() {
     try {
 
       const response = await axios.get(
-        "https://jubilant-waffle-6r75jgvp9pghg6r-3000.app.github.dev/api/search" + encodeURIComponent(errorText)
+        "https://codestackradar-api-production.up.railway.app/api/search" + encodeURIComponent(errorText)
       );
 
       setResults(response.data);
